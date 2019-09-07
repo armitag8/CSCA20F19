@@ -8,7 +8,7 @@ whose current working directory is a local copy of the root of this
 repository:
 
 ```
-python3 -m http.server --directory site --bind 127.0.0.42
+python3 -m http.server --directory docs --bind 127.0.0.42
 ```
 
 It may be necessary to replace "python3" with just "python" on **Windows**.
