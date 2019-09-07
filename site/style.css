@@ -1,0 +1,17 @@
+nav li {
+    border: transparent solid 1px;
+    border-radius: 8px;
+}
+
+nav li:hover {
+    border: lightslategray solid 1px;
+}
+
+#root {
+    width: 95%;
+    margin: auto;
+}
+
+.project{
+    margin-top: 3px;
+}
