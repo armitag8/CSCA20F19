@@ -1,29 +1,31 @@
+#! /usr/bin/env python3
 import turtle
 import random
 from functools import total_ordering, partial
 from tkinter import messagebox, Toplevel, Label
-import const
 import os
 import sys
-import sqlite3
-import datetime
+import score_board_db
+import const
+
 
 def main():
     Game().start()
 
+
 @total_ordering
 class _AbstractFish(turtle.Turtle):
-    SHAPE_NAME= "fish"
-    SHAPE = turtle.Shape("polygon", 
-        (
-            (3, -4), (2, -3), (1, -2), (2, -1), (3, 0),
-            (3, 1), (2, 3), (1, 4), (0, 3),
-            (-1, 4), (-2, 3), (-3, 1), (-3, 0), 
-            (-2, -1), (-1, -2), (-2, -3), (-3, -4),
-        )
-    )
+    SHAPE_NAME = "fish"
+    SHAPE = turtle.Shape("polygon",
+                         (
+                             (3, -4), (2, -3), (1, -2), (2, -1), (3, 0),
+                             (3, 1), (2, 3), (1, 4), (0, 3),
+                             (-1, 4), (-2, 3), (-3, 1), (-3, 0),
+                             (-2, -1), (-1, -2), (-2, -3), (-3, -4),
+                         )
+                         )
     BASE_SIZE = 3.75
-    
+
     def __init__(self, speed: int, size: int, position: tuple):
         super().__init__()
         self._fish_speed = speed
@@ -43,7 +45,7 @@ class _AbstractFish(turtle.Turtle):
         """Is this fish touching the other"""
         radius = (self._fish_size + other._fish_size) * self.BASE_SIZE - 1
         return self.is_in_radius(other, radius)
-    
+
     def is_in_radius(self, other: "Fish", radius: int) -> bool:
         """Is this fish within radius pixels of the other?"""
         self_x, self_y = self.position()
@@ -53,7 +55,7 @@ class _AbstractFish(turtle.Turtle):
     def get_size(self) -> int:
         """Returns the size of this fish."""
         return self._fish_size
-    
+
     def get_speed(self):
         """Returns the speed of this fish."""
         return self._fish_speed
@@ -84,7 +86,7 @@ class NPCFish(_AbstractFish):
     def __init__(self, speed: int, size: int, position: tuple):
         super().__init__(speed, size, position)
         self.color("green")
-    
+
     def get_speed(self):
         """Randomly gives a speed between 1/3 of base and full base speed."""
         return random.randrange(1, 3) * self._fish_speed / 3
@@ -99,8 +101,8 @@ class NPCFish(_AbstractFish):
     @staticmethod
     def random_spawn(speed: int, size: int) -> "Fish":
         """Create a new NPCFish in a random location with random stats."""
-        fish = NPCFish(speed * random.randint(1, 3), 
-                       size * random.random(), 
+        fish = NPCFish(speed * random.randint(1, 3),
+                       size * random.random(),
                        Ocean.get_random_coordinates())
         fish.setheading(random.randint(0, 360))
         return fish
@@ -171,22 +173,24 @@ class PlayerFish(_AbstractFish):
             p_size = self.get_size()
             new_player_size = p_size + other.get_size() / p_size
             self.recreate(new_player_size, self.position())
-            other.recreate(random.randint(self.get_size() // 1.5, 
-                                          int(self.get_size() * 1.5)),    
-                Ocean.get_random_coordinates(avoid=self.position(),
-                                             margin=self.get_size() * 10))
+            other.recreate(random.randint(self.get_size() // 1.5,
+                                          int(self.get_size() * 1.5)),
+                           Ocean.get_random_coordinates(avoid=self.position(),
+                                                        margin=self.get_size() * 10))
         else:
             raise GameOver("You were eaten :(")
+
 
 class Ocean:
     MAX_X = 512
     MAX_Y = 384
+
     def __init__(self):
         """Create a new Ocean."""
         self._window = turtle.Screen()
         self._window.screensize(self.MAX_X * 2, self.MAX_Y * 2, "blue")
         self._window.title(Game.TITLE)
-        self._window.register_shape(_AbstractFish.SHAPE_NAME, 
+        self._window.register_shape(_AbstractFish.SHAPE_NAME,
                                     _AbstractFish.SHAPE)
         self.reset_fish()
 
@@ -199,18 +203,18 @@ class Ocean:
 
         self._player = self.make_player()
         self._fishes = self.make_fish()
-    
+
     def make_fish(self) -> list:
         """Get a list of new NPC fish."""
         return [
             NPCFish.random_spawn(const.BASE_FISH_SPEED, const.BASE_FISH_SIZE)
             for i in range(const.NUM_FISH)
-        ] 
-    
+        ]
+
     def make_player(self) -> PlayerFish:
         """Get a new Player Fish."""
         return PlayerFish(const.PLAYER_SPEED, const.PLAYER_START_SIZE)
-    
+
     def get_screen(self) -> turtle.Screen:
         return self._window
 
@@ -232,7 +236,7 @@ class Ocean:
             if abs(self_x - x) > margin and abs(self_y - y) > margin:
                 break
         return x, y
-    
+
     def get_player(self):
         return self._player
 
@@ -253,16 +257,17 @@ class SoundEngine:
             self._muted = False
 
     instance = None
+
     def __init__(self):
         if SoundEngine.instance is None:
             SoundEngine.instance = SoundEngine.__SoundEngine()
-    
+
     def __getattr__(self, name):
         return getattr(self.instance, name)
-    
+
     def __setattr__(self, name, value):
         setattr(self.instance, name, value)
-    
+
     def play(self):
         if not self._muted:
             self._playing = True
@@ -272,24 +277,24 @@ class SoundEngine:
         self._muted = not self._muted
         if is_running:
             self.toggle_pause()
-    
+
     def toggle_pause(self):
         if self._playing:
             self.mixer.music.pause()
             self._playing = False
         else:
             self.play()
-    
+
     def game_over(self):
         self.mixer.music.stop()
         self._playing = False
         self.play_effect("game_over")
-    
+
     def play_effect(self, effect: str):
         if not self._muted:
             self.mixer.Sound(const.EFFECTS[effect]).play()
 
-        
+
 class Game:
     TITLE = "Bigger Fish"
 
@@ -306,7 +311,7 @@ class Game:
         self._running = True
         self.run()
         screen.mainloop()
-    
+
     def restart(self):
         """Reset and restart the game."""
         self._ocean.reset_fish()
@@ -335,7 +340,7 @@ class Game:
         except Exception as e:
             self._sounds.game_over()
         else:
-            self._ocean.get_screen().ontimer(self.run, 16) #  16.77 ms => 60 FPS
+            self._ocean.get_screen().ontimer(self.run, 16)  # 16.77 ms => 60 FPS
 
     def restart_prompt(self, title: str):
         """Opens ScoreBoard, and asks Player to play again."""
@@ -351,7 +356,7 @@ class Game:
     def get_score(self) -> int:
         """Get the current score of the Player"""
         return int(self._ocean.get_player().get_size() * 500)
-    
+
 
 class GameOver(Exception):
     def __init__(self, message: str):
@@ -360,7 +365,7 @@ class GameOver(Exception):
 
 class ScoreBoard:
     def __init__(self):
-        self.show_scores(ScoreBoardDB.get_highscores())
+        self.show_scores(score_board_db.get_highscores())
 
     def show_scores(self, scores: list):
         self._board = Toplevel()
@@ -368,10 +373,10 @@ class ScoreBoard:
         for i, row in enumerate([("Name", "Score", "Date")] + scores):
             for j in range(3):
                 Label(self._board, text=row[j]).grid(row=i,
-                                column=j, padx=30, pady=10)
-    
+                                                     column=j, padx=30, pady=10)
+
     def record_score(self, score: int):
-        highscores = ScoreBoardDB.get_highscores()
+        highscores = score_board_db.get_highscores()
         new_highscore = not len(highscores) == 10 or score > highscores[-1][1]
         if new_highscore:
             message = "New High Score!"
@@ -379,78 +384,19 @@ class ScoreBoard:
             message = "Sorry, try again."
         name = turtle.Screen().textinput(message, "Input your name: ")
         if name:
-            ScoreBoardDB.add_score(name, score)
+            score_board_db.add_score(name, score)
             if new_highscore:
-                scores = ScoreBoardDB.get_highscores()
+                scores = score_board_db.get_highscores()
             else:
-                scores = ScoreBoardDB.get_scores_near(score)
+                scores = score_board_db.get_scores_near(score)
             self._board.destroy()
             self.show_scores(scores)
-    
+
     def destroy(self):
         self._board.destroy()
 
 
-class ScoreBoardDB:
-    SCORE_TABLE = "Score"
-    def __init__(self):
-        self._execute_dml_query("DROP TABLE IF EXISTS " + self.SCORE_TABLE)
-        self._execute_dml_query("CREATE TABLE " + self.SCORE_TABLE + 
-                                 " (name TEXT, score INTEGER, date DATE)")
-    
-    @staticmethod
-    def get_con_cur():
-        con = sqlite3.connect(const.DB_FILE)
-        cur = con.cursor()
-        return con, cur
-    
-    @staticmethod
-    def close_con_cur(con, cur):
-        cur.close()
-        con.commit()
-        con.close()
-    
-    @staticmethod
-    def _execute_dml_query(query, args=tuple()):
-        con, cur = ScoreBoardDB.get_con_cur()
-        cur.execute(query, args)
-        ScoreBoardDB.close_con_cur(con, cur)
-
-    @staticmethod
-    def _execute_select_query(query, args=tuple()):
-        con, cur = ScoreBoardDB.get_con_cur()
-        cur.execute(query, args)
-        rows = cur.fetchall()
-        ScoreBoardDB.close_con_cur(con, cur)
-        return rows
-
-
-    @staticmethod
-    def add_score(player: str, score: int):
-        query = "INSERT INTO " + ScoreBoardDB.SCORE_TABLE + " VALUES (?, ?, ?)"
-        data = player, str(score), str(datetime.date.today())
-        ScoreBoardDB._execute_dml_query(query, data)
-    
-    @staticmethod
-    
-    def get_highscores():
-        query = ("SELECT * FROM " + ScoreBoardDB.SCORE_TABLE + " ORDER BY " +
-                "score DESC LIMIT 10")
-        return ScoreBoardDB._execute_select_query(query)
-
-    @staticmethod
-    def get_scores_near(score: int):
-        query = (
-            "SELECT * FROM (" + 
-            "SELECT * FROM " + ScoreBoardDB.SCORE_TABLE + 
-            " WHERE score > ? UNION SELECT * FROM " + 
-            ScoreBoardDB.SCORE_TABLE + " WHERE score <= ? " +
-            ") ORDER BY score DESC LIMIT 10"
-        )
-        return ScoreBoardDB._execute_select_query(query, [score] * 2)
-        
-
 if __name__ == "__main__":
     if not os.path.isfile(const.DB_FILE):
-        ScoreBoardDB()
+        score_board_db()
     main()

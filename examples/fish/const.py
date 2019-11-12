@@ -14,3 +14,5 @@ PLAYER_SPEED = 3
 PLAYER_START_SIZE = 2
 
 DB_FILE = "scores.db"
+
+SCORE_TABLE = "Score"
