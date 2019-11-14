@@ -15,7 +15,7 @@ http://www.ebi.ac.uk/biomart/ for more information.
 
 ## Build  and run
 
-- Read [The Handout](https://github.com/armitag8/CSCA20F19/examples/genie/tree/master/handout.pdf)
+- Read [The Handout](https://github.com/armitag8/CSCA20F19/raw/master/examples/genie/handout.pdf)
 - Download all files and folders in this folder (into the same folder)
 - Download some sample data (from [Ensembl](http://useast.ensembl.org/info/data/ftp/index.html), probably), for example: ftp://ftp.ensembl.org/pub/release-98/fasta/homo_sapiens/cds/
 - Make sure the file you downloaded is in the same folder as `genie.py` and that the `FILENAME` variable there matches the filename of what you downloaded.
