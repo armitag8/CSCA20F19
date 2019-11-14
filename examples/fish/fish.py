@@ -5,8 +5,8 @@ from functools import total_ordering, partial
 from tkinter import messagebox, Toplevel, Label
 import os
 import sys
-import score_board_db
 import const
+import score_board_db
 
 
 def main():
@@ -398,5 +398,5 @@ class ScoreBoard:
 
 if __name__ == "__main__":
     if not os.path.isfile(const.DB_FILE):
-        score_board_db()
+        score_board_db.initialize_score_db()
     main()
