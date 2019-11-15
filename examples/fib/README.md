@@ -8,5 +8,6 @@ A simple Python program which prints the Fibonacci sequence.
 
 ## Build  and run
 
-- Download all files and folders in this folder (into the same folder)
+- Download `fib.py`
 - Double-click `fib.py`
+- Use <kbd>Ctrl</kbd>+<kbd>C</kbd> to STOP
