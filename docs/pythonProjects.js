@@ -14,6 +14,13 @@ const pythonProjects = [
         "url": "https://github.com/armitag8/CSCA20F19/raw/master/examples/filer/filer.py"
     },
     {
+        "title": "Store",
+        "author": "Angela",
+        "description": "An extension of Lab 8 that adds enough features to form a simple shopping application.",
+        "repo": "https://github.com/angelazb/CSCA20F19/tree/master/store",
+        "url": "https://github.com/angelazb/CSCA20F19/raw/master/store/store.py",
+    },
+    {
         "title": "CalcR",
         "author": "Joe",
         "description": "A simple calculator, with a Roman twist.",

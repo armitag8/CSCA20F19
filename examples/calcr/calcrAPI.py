@@ -121,7 +121,6 @@ def _value_of_roman_numeral_terms(roman_numeral_terms: list) -> int:
 
     >>> _value_of_roman_numeral_terms(["L-C", "II"])
     52
-
     """
     total = 0
     for term in roman_numeral_terms:
@@ -262,7 +261,6 @@ def main():
 
     >>> ROMAN_NUMERALS == ['M', 'D', 'C', 'L', 'X', 'V', 'I']
     True
-
     """
     import doctest
     doctest.testmod(verbose=True)
