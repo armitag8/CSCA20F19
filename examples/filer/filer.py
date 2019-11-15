@@ -26,29 +26,30 @@ def rename_text_and_numbers(path, file_extension):
     text = input("Input text: ")
     first_number = int(input("Input starting number (default 1)") or 1)
     step = int(input("Input step (default 1): ") or 1)
-    c = first_number
 
     for root, directories, file_names in walk(path):
         for file_name in sorted(file_names):
             if file_extension in file_name:
                 rename(root + sep + file_name, root + sep + text +
-                       str(c).zfill(4) + file_extension)
-                c += step
+                       str(first_number).zfill(4) + file_extension)
+                first_number += step
 
 
 def rename_tv_show(path, file_extension):
     print("You chose to rename a TV show")
     show_name = input("Name of TV show: ")
     season = input("Season: ")
-    starting_chapter = int(input("Starting chapter (default1): ") or 1)
-    c = starting_chapter
+    starting_chapter = int(input("Starting chapter (default 1): ") or 1)
 
     for root, directories, file_names in walk(path):
         for file_name in sorted(file_names):
             if file_extension in file_name:
-                rename(root + sep + file_name, root + sep + show_name + "_"
-                       + season + "x" + str(c).zfill(2) + file_extension)
-                c += 1
+                rename(root + sep + file_name,
+                       root + sep + show_name + "_"
+                       + season.zfill(2) + "x"
+                       + str(starting_chapter).zfill(2)
+                       + file_extension)
+                starting_chapter += 1
 
 
 def add_string_to_file_name(path, file_extension):
@@ -58,8 +59,9 @@ def add_string_to_file_name(path, file_extension):
     for root, directories, file_names in walk(path):
         for file_name in sorted(file_names):
             if file_extension in file_name:
-                rename(root + sep + file_name, root + sep +
-                       file_name[:-len(file_extension)] + text + file_extension)
+                rename(root + sep + file_name,
+                       root + sep + file_name[:-len(file_extension)]
+                       + text + file_extension)
 
 
 def rename_files(selection, path, file_extension):
