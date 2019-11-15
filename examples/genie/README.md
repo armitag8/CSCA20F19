@@ -4,6 +4,8 @@ A Python program which prints the Genome data read from a FASTA file.
 
 Genie is a genome explorer that reads, parses and prints data from FASTA (format) files.\r\n The data from these files describe genome sequences and are available for many species at [Ensembl](http://useast.ensembl.org/info/data/ftp/index.html)
 
+**Note**: This program has only been tested on `Homo_sapiens.GRCh38.cds.all.fa`
+
 ## Requirements
 
 - Python3
