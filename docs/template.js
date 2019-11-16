@@ -1,8 +1,11 @@
-import {views} from "./views.js";
+import { views } from "./views.js";
 
 const render = body => $("#root").html(body);
 
-const go = target => views[target].then(render).catch(err => console.log(err));
+const go = target => {
+        history.pushState({ id: target }, target, target);
+        views[target].then(render).catch(err => console.log(err));
+};
 
 let links = $("#links");
 Object.keys(views).forEach(view => {
