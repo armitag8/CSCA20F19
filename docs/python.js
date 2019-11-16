@@ -7,7 +7,7 @@ const display = project => `
     <h6 class="card-subtitle">By: ${project.author}</h6>
     <p class="card-text">${project.description}</p>
     <a href=${project.repo}/ class="btn btn-primary">See the documentation and files</a>
-    <a href=${project.url}/ class="btn btn-primary">See the code</a>
+    <a href=${project.url}/ class="btn btn-secondary">See the code</a>
   </div>
 </div>
 `;
