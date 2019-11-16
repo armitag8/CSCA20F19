@@ -21,6 +21,13 @@ const pythonProjects = [
         "url": "https://github.com/angelazb/CSCA20F19/raw/master/store/store.py",
     },
     {
+        "title": "Web API",
+        "author": "Jun",
+        "description": "An example of how to call a RESTful web API in Python.\r\n Use this kind of code if you want to access data from a source online.",
+        "repo": "https://github.com/junthehacker/csca20/blob/master/python-public-api.md",
+        "url": "https://github.com/armitag8/CSCA20F19/raw/master/recapi/recapi.py",
+    },
+    {
         "title": "CalcR",
         "author": "Joe",
         "description": "A simple calculator, with a Roman twist. Available as GUI or CMD interface.",
