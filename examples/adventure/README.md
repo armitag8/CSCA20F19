@@ -1,5 +1,5 @@
 # Adventure
-A Python-based adventure game, played by test interface.
+A Python-based adventure game, played by text interface.
 
 ## Requirements
 
