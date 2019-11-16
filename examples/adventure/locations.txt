@@ -1,0 +1,209 @@
+LOCATION -1
+0
+That way is blocked.
+That way is blocked.
+END
+
+LOCATION 1
+2
+You are in the Garden. There is a Hallway leading East, a Hallway lead West, and the Library is South. 
+You are in the Garden. The smell of daffodils reminds you of trips to the cottage, where you stay up late stargazing for countless hours. There is a Hallway leading East, a Hallway leading West, and the Library is South.
+END
+
+LOCATION 2
+0
+You are in the Study Room. There is a Hallway leading West, a Hallway leading East, and the Bookstore is South.
+You are in the Study Room. This room is full of restless students cramming last minute before the Astronomy exam. There is a Hallway leading West, a Hallway leading East, and the Bookstore is South. 
+END
+
+LOCATION 3
+-1
+You are in the Exam Room. There is a Wall South of you, a Wall East of you, a Hallway West of you, and a Library North of you.
+You are in the Exam Room. The invigilator critically looks at you, and disapproves of your early arrival in the Exam Room. Worried about the risk of students cheating, he says that every time you arrive in this room early, he will deduct one mark from your exam grade. There is a Wall South of you, a Wall East of you, a Hallway West of you, and a Library North of you
+END
+
+LOCATION 4
+3
+You are in the Library. The Exam Room is South of you, the Garden is North of you, there is a Hallway leading West, and there is a Wall East of you.
+You are in the Library. The Library is full of students appearing to study, but upon second glance you notice that most of them are checking social media and sneaking snacks from their bags. The Exam Room is South of you, the Garden is North of you, there is a Hallway leading West, and there is a Wall East of you.
+END
+
+LOCATION 5
+2
+You are in the Bookstore. There is a Hallway leading West, and a Hallway leading East, the Gym is South of you, the Study Room is North of you.
+You are in the Bookstore. You are surrounded by scholarly paraphernalia. There is a long line of students waiting to purchase their school supplies. There is a Hallway leading West, and a Hallway leading East, the Gym is South of you, the Study Room is North of you.
+END
+
+LOCATION 6
+1
+You are in the Gym. There is a Hallway leading West, the bookstore is North of you, there is a Wall East of you, and there is a Wall South of you.
+You are in the gym. There are some students playing basketball, trying to shake off their pre-exam nerves with some exercise. There is a Hallway leading West, the Bookstore is North of you, there is a Wall East of you, and there is a Wall South of you.
+END
+
+LOCATION 7
+0
+You are at your Locker. There is a Wall West of you, and a Hallway leading East of you. There is a Wall North of you, and there is a Wall South of you.
+You are at your Locker. The area around your locker is very quiet. You've forgotten the key for your Locker, so you can't get in on my own. There is a Wall West of you, and a Hallway leading East of you. There is a Wall North of you, and there is a Wall South of you.
+END
+
+LOCATION 38
+0
+Your Locker is now open. There is a Wall West of you, and a Hallway leading East of you. There is a Wall North of you, and there is a Wall South of you.
+Your Locker is now open. The area around your locker is very quiet. There is a Wall West of you, and a Hallway leading East of you. There is a Wall North of you, and there is a Wall South of you.
+END
+
+LOCATION 8
+0
+You are at the Washroom. There is a Hallway leading South of you, there is a Wall North of you, and there is a Wall West of you. 
+You are at the Washroom. This room is empty. There is a Hallway leading South of you, there is a Wall North of you, and there is a Wall West of you. 
+END
+
+LOCATION 9
+0
+You are in the Custodian's Office. There is a Wall North of you, there is a Wall East of you, there is a Hallway leading West of you, and there is a Bench South of you.
+You are in the Custodian's Office. There is a couch full of tools, and a television playing the news in the background. There is a Wall North of you, there is a Wall East of you, there is a Hallway leading West of you, and there is a Bench South of you.
+END
+
+LOCATION 10
+1
+You are at the Vending Machine. There is a Hallway leading West of you, and there is a Hallway leading East of you. There is a Wall South of you, and there is a Wall North of you.
+You are at the Vending Machine. There are many delicious looking items in the Vending Machine. There is a Hallway leading West of you, and there is a Hallway leading East of you. There is a Wall South of you, and there is a Wall North of you.
+END
+
+LOCATION 11
+2
+You are at a Bench. There is a Hallway East of you, there is a Hallway West of you, there is a Wall South of you, and the Custodian's Office is North of you.
+You are at a Bench. You breathe in some fresh air to relax your mind. Last night you came here and remember having to show your T-Card to campus police, it must be close by. There is a Hallway East of you, there is a Hallway West of you, there is a Wall South of you, and the Custodian's Office is North of you. 
+END 
+
+LOCATION 12
+0
+You are at the Ravine. There is a Hallway leading East of you, a Wall West of you, the Vending Machine is North of you, and there is a Ditch South of you.
+You are at the Ravine. You remember falling off your bicycle here yesterday evening. You can still see the marks in the ground which you dug while flying off your bike. There is a Hallway leading East of you, a Wall West of you, the Vending Machine is North of you, and there is a Ditch South of you.
+END
+
+LOCATION 30
+0
+You are in a Ditch. The Ravine is North of you, a Wall is West of you, and a Wall is East of you.
+You are in a Ditch. It is dark and full of branches in this Ditch. The Ravine is North of you, a Wall is West of you, and a Wall is East of you.
+END
+
+LOCATION 13
+0
+You are in a Hallway. The Garden is West of you and another Hallway is East of you.
+You are in a Hallway. The Garden is West of you and another Hallway is East of you.
+END
+
+LOCATION 14
+0
+You are in a Hallway. There is a Hallway leading South of you, there is a Hallway West of you, and the Study Room is East of you.
+You are in a Hallway. There is a Hallway leading South of you, there is a Hallway West of you, and the Study Room is East of you.
+END
+
+LOCATION 15
+0
+You are in a Hallway. There is a Hallway leading South of you, and the Study Room is West of you.
+You are in a Hallway. There is a Hallway leading South of you, and the Study Room is West of you.
+END
+
+LOCATION 17
+0
+You are in a Hallway. There is a Hallway leading North of you, a Hallway leading South of you, there is a Wall is West of you, and the Bookstore is East of you.
+You are in a Hallway. There is a Hallway leading North of you, a Hallway leading South of you, there is a Wall is West of you, and the Bookstore is East of you.
+END
+
+LOCATION 18
+0
+You are in a Hallway. There is a Hallway leading North of you, the Bookstore is West of you, and there is a Wall South of you.
+You are in a Hallway. There is a Hallway leading North of you, the Bookstore is West of you, and there is a Wall South of you.
+END
+
+LOCATION 20
+0
+You are in a Hallway. There is a Hallway leading North of you, and a Hallway leading South of you. There is a Wall West of you, and the Gym is East of you.
+You are in a Hallway. While walking you notice that you are feeling hungry. There is a Hallway leading North of you, and a Hallway leading South of you. There is a Wall West of you, and the Gym is East of you.
+END
+
+LOCATION 22
+0
+You are in a Hallway. There is an Exam Room North of you, the Custodian's Room is South of you, and you Locker is East of you.
+You are in a Hallway. There is an Exam Room North of you, the Custodian's Room is South of you, and you Locker is East of you.
+END
+
+LOCATION 23
+0
+You are in a Hallway. There is a Hallway leading North of you, there is a Hallway leading South of you, your Locker is West of you, and there is a Wall East of you.
+You are in a Hallway. There is a Hallway leading North of you, there is a Hallway leading South of you, your Locker is West of you, and there is a Wall East of you.
+END
+
+LOCATION 25
+0
+You are in a Hallway. There is a Hallway leading North of you, a Wall South of you, a Wall West of you, and a Vending Machine East of you.
+You are in a Hallway. There is a Hallway leading North of you, a Wall South of you, a Wall West of you, and a Vending Machine East of you.
+END
+
+LOCATION 26
+0
+You are in a Hallway. There is a Hallway leading South of you, a Washroom is North of you, and a Vending Machine is West of you.
+You are in a Hallway. There is a Hallway leading South of you, a Washroom is North of you, and a Vending Machine is West of you
+END
+
+LOCATION 27
+0
+You are in a Hallway. There is a Bench West of you, there is a Wall North of you, there is a Wall East of you, and there is Hallway South of you
+You are in a Hallway. There is a Bench West of you, there is a Wall North of you, there is a Wall East of you, and there is Hallway South of you
+END
+
+LOCATION 28
+0
+You are in a Hallway. There is a Hallway North of you, the Ravine is West of you, and there is a wall South of you.
+You are in a Hallway. There is a Hallway North of you, the Ravine is West of you, and there is a wall South of you.
+END
+
+LOCATION 29
+0
+You are in a Hallway. There is a Hallway North of you, there is a Wall East of you, and there is a Wall West of you.
+You are in a Hallway. There is a Hallway North of you, there is a Wall East of you, and there is a Wall West of you.
+END
+
+LOCATION 31
+0
+You are in a Hallway. There is a Garden East of you, and there is a Hallway South of you.
+You are in a Hallway. There is a Garden East of you, and there is a Hallway South of you.
+END
+
+LOCATION 32
+0
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and a Library is East of you.
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and a Library is East of you.
+END
+
+LOCATION 33
+0
+You are in a Hallway. There is a Hallway leading North of you, there is a Hallway leading South of you, and the Exam Room is East of you.
+You are in a Hallway. There is a Hallway leading North of you, there is a Hallway leading South of you, and the Exam Room is East of you.
+END
+
+LOCATION 34
+0
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Wall East of you.
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Wall East of you.
+END
+
+LOCATION 35
+0
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Custodian's Room East of you.
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Custodian's Room East of you.
+END
+
+LOCATION 36
+0
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Bench East of you. 
+You are in a Hallway. There is a Hallway North of you, there is a Hallway South of you, and there is a Bench East of you.
+END
+
+LOCATION 37
+0
+You are in a Hallway. There is a Hallway North of you, a Wall South of you, and a Wall East of you.
+You are in a Hallway. There is a Hallway North of you, a Wall South of you, and a Wall East of you.
+END 

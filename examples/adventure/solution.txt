@@ -1,0 +1,68 @@
+Go South
+Go South
+Go South
+Go South
+Go East
+Take Bolt Cutter
+Inventory
+Go South
+Score
+Go West
+Go South
+Take Student Card
+Inventory
+Go North
+Go North
+Go North
+Go North
+Go North
+Go North
+Go East
+Score
+Go East
+Go East
+Go East
+Go South
+Score
+Go South
+Score
+Go West
+Go South
+Go West
+Cut Lock
+Take Cheat Sheet
+Inventory
+Close Locker
+Inventory
+Score
+Go East
+Go South
+Go East
+Score
+Go South
+Go South
+Take Pen
+Inventory
+Go North
+Go North
+Go West
+Go North
+Go North
+Go North
+Go North
+Go West
+Go West
+Go South
+Score
+Go South
+Score
+Drop Pen
+Inventory
+Score
+Drop Student Card
+Inventory
+Score
+Drop Cheat Sheet
+Inventory
+Score
+Quit

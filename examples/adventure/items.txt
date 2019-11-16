@@ -1,0 +1,4 @@
+30 3 10 Pen
+38 3 25 Cheat Sheet
+37 3 49 Student Card
+9 38 6 Bolt Cutter
