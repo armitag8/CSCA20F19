@@ -8,14 +8,16 @@ whose current working directory is a local copy of the root of this
 repository:
 
 ```
-python3 -m http.server --directory docs --bind 127.0.0.42
+pip install SimpleHTTP404Server
+cd docs
+python -m SimpleHTTP404Server
 ```
 
 **Note** It may be necessary to replace "python3" with just "python" on **Windows**.
 
 Now, you can visit your local build of this website at:
 ```
-https://127.0.0.42:8000
+http://localhost:8000
 ``` 
 
 ## Contributing

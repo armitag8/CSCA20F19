@@ -22,7 +22,7 @@ const getProjects = () => new Promise(async (resolve, reject) => {
 
 
 const display = project => `
-<div class="card project">
+<div class="card project" href="${project.title}">
   <iframe src="https://scratch.mit.edu/projects/${
   project.id
   }/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
