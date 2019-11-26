@@ -76,7 +76,7 @@ debug both the shopping_list and pint_csv functions.
 Though we were quite productive, we are behind our targets. We will add as many features as we can,
 but it seems we must resort to our backup now.
 
-### Week 2 Report
+### Final Week Report
 
 We managed to squeeze in some 2 extra functions which:
 
