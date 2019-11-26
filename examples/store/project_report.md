@@ -78,7 +78,7 @@ but it seems we must resort to our backup now.
 
 ### Final Week Report
 
-We managed to squeeze in some 2 extra functions which:
+We managed to squeeze in 2 extra functions which:
 
 - Give all available colours of an item
 - Display which items have less than a certain number (MIN_STOCK) available
