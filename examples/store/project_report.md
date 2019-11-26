@@ -76,6 +76,15 @@ debug both the shopping_list and pint_csv functions.
 Though we were quite productive, we are behind our targets. We will add as many features as we can,
 but it seems we must resort to our backup now.
 
+### Week 2 Report
+
+We managed to squeeze in some 2 extra functions which:
+
+- Give all available colours of an item
+- Display which items have less than a certain number (MIN_STOCK) available
+
+Since our tutorial is on Monday, we had no extra time to work.
+
 ## References
 
 -------------
